@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--Video-->
+  <video autoplay muted loop id="bg-video">
+    <source src="/video/video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+<!-- Music -->
+<audio id="bgMusic" loop autoplay>
+  <source src="audio/bg.mpeg" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<!-- Landing -->
+<div class="landing_container">
+  <section class="landing" id="landing">
+    <h1 style="font-family: 'Playfair Display', serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;"> Happy Birthday Paul <br> 🎉🥳 </h1>
+    <p id="typeText"></p>
+    <button onclick="start()">Open Your Gifts 🎁</button>
+  </section>
+</div>
+
+<!-- Gifts -->
+<div class="gifts_container">
+  <section class="gifts hidden" id="gifts">
+    <h2 style="color: rgb(255, 255, 255); font-size: 35px; font-weight: bold;">Choose a Gift</h2>
+  
+    <div class="gift-container">
+      <div class="gift unlocked" onclick="openGift(1)">🎁</div>
+      <div class="gift locked" onclick="openGift(2)">🔒</div>
+      <div class="gift locked" onclick="openGift(3)">🔒</div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal -->
+<div class="modal-container" id="modal_container">
+  <div class="modal hidden"  id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()"><b>×</b></span>
+      <div id="giftContent"></div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <section id="thankYouSection" class="thank-you hidden">
+    <h1>Thank You 💖</h1>
+    <p>
+        Thank you for taking time to open each gift.
+        You mean so much to us, and this little surprise was made with love.
+        We hope it brought a smile to your face today.
+    </p>
+
+    <button onclick="goBackToGifts()">Back to Gifts 🎁</button>
+</section>
+</div>
+
+<!-- Confetti 
+<canvas id="confetti">
+
+</canvas>
+-->
+<script src="script.js">
+</script>
+</body>
+</html>
